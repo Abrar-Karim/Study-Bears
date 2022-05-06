@@ -26,8 +26,6 @@ function Settings() {
                     <hr className="line"></hr>
                 </div>
             </div>
-            <div>
-            </div>
         </div>
         
     );

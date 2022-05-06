@@ -87,6 +87,12 @@
 .line {
   border: 1px solid white;
 }
+.settingPage {
+  margin-left: 20%;
+  width: 80%;
+  height: 100%;
+  background-color: rebeccapurple;
+}
 
 .login {
   height: 100vh;
@@ -144,4 +150,6 @@
   text-decoration: none;
   background-color: black;
 }
+
+
 

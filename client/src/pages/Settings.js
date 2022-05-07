@@ -11,7 +11,7 @@ function Settings() {
     return(
         <div>
             <div className="Bar" style={{backgroundColor: "#FDB515"}}>
-            <img alt="logo" className="photo" src={bear}/>
+            <img alt="logo" className="photo" src={bear} style={{width: "100px", height: "100px"}}/>
             <h1 style = {{marginRight: "43%", paddingTop: "10px"}}>StudyBear</h1>
             <h3 className="logInBarText">Setting</h3>
             <h3 className="logInBarText">Profile</h3>

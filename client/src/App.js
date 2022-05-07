@@ -30,7 +30,7 @@ const App = () =>{
     return (
       <div className="container">
         <div className="Bar">
-          <img alt="logo" className="photo" src={bear}/>
+          <img alt="logo" className="photo" src={bear} style={{width: "100px", height: "100px"}}/>
           <h1 style = {{marginRight: "43%", paddingTop: "10px"}}>StudyBear</h1>
           <h3 className="barText">About us</h3>
           <h3 className="barText">How it works</h3>

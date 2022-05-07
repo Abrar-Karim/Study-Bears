@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 import bear from './images/bear.png'
 import oski from "./images/oski.webp"
 import Modal from 'react-modal';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -32,16 +33,17 @@ const App = () =>{
         <div className="Bar">
           <img alt="logo" className="photo" src={bear} style={{width: "100px", height: "100px"}}/>
           <h1 style = {{marginRight: "43%", paddingTop: "10px"}}>StudyBear</h1>
-          <h3 className="barText">About us</h3>
-          <h3 className="barText">How it works</h3>
-          <h3 className="barText">Contact us</h3>
+          <Link className="barText" to="/aboutus" style={{textDecoration: "none", marginTop: "20px"}}>About us</Link>
+          <Link className="barText" to="/" style={{textDecoration: "none", marginTop: "20px"}}>How it works</Link>
+          <Link className="barText" to="/" style={{textDecoration: "none", marginTop: "20px"}}> Contact us</Link>
           <button className="topButton" onClick={() => setModalSignUpIsOpen(true)}> Join StudyBear!</button>
           <Modal isOpen={modalSignUpIsOpen} onRequestClose={() => setModalSignUpIsOpen(false)} style={{
             content: {
               marginLeft: "28%",
               marginTop: "100px",
               width: "500px",
-              height: "300px"
+              height: "300px",
+              backgroundColor: "#00B4D8"
             }
           }}>
             <div className="register__container">
@@ -69,14 +71,14 @@ const App = () =>{
             </div>
             <div>
             <Link className="register__btn" onClick={register}
-            to= "/setting">
+            to= "/home">
                 Register
             </Link>
             </div>
             <div>
-              <button style={{marginLeft:" 150px", border: "none", background: "none"}} 
+              <button style={{marginLeft:" 100px", border: "none", background: "none", marginTop:"20px", color: "yellow", fontSize: "20px"}} 
               onClick={() =>  {setModalSignUpIsOpen(false); setModalLogInIsOpen(true)}}> Already have an account? 
-              <span style={{color: "blue"}}> Log In!</span></button>
+              <span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}> Log In!</span></button>
             </div>
           </Modal>
           <Modal isOpen={modalLogInIsOpen} onRequestClose={() => setModalLogInIsOpen(false)} style={{
@@ -105,7 +107,7 @@ const App = () =>{
             <Link
               className="login__btn"
               onClick={() => {logInWithEmailAndPassword(email, password);}}
-              to="/setting"
+              to="/home"
             >
               Login
             </Link>

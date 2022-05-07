@@ -6,7 +6,7 @@ import App from './App';
 import Home from './pages/home/Home'
 import reportWebVitals from './reportWebVitals';
 import Settings from "./pages/Settings";
-
+import About from './pages/About';
 
 
 ReactDOM.render(
@@ -15,6 +15,7 @@ ReactDOM.render(
         <Route exact path="/" element={<App/>}/>
         <Route path="/setting" element={<Settings/>}/>
         <Route path="/home" element={<Home/>}/>
+        <Route path="/aboutus" element={<About/>}/>
     </Routes>
   </Router>,
   document.getElementById('root')
